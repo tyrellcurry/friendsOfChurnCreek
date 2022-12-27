@@ -30,11 +30,11 @@ export default function Home({ content }) {
           </ReactMarkdown>
         </div>
         <ul className="document-list">
-        {homepageObj.documentcustom.map(document => (
+        {/* {homepageObj.documentcustom.map(document => (
         <li key={document.slug}>
           {document.listitem} Download the document <Link href={document.documentfile}>here</Link>
         </li>
-      ))}
+      ))} */}
         </ul>
       </div>
     </>
