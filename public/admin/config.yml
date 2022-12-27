@@ -19,10 +19,10 @@ collections:
     create: false # Disable users from creating new documents in this collection
     slug: "{{slug}}" # Filename template (used when targeting in index.js)
     fields: # The fields for each document
-      - {label: "Banner: Main Title", name: "title", widget: "string"}
-      - {label: "Banner: Subtitle", name: "subtitle", widget: "string"}
+      - {label: "Banner: Main Title", name: "title", widget: "text"}
+      - {label: "Banner: Subtitle", name: "subtitle", widget: "text"}
       - {label: "Banner: Background Image", name: "heroimage", choose_url: false, widget: "image"}
-      - {label: "Introduction: Text", name: "introtext", widget: "text"}
+      - {label: "Introduction: Text", name: "introtext", widget: "markdown"}
       - {label: "(Do Not Edit)", name: "pagename", widget: "string"} # identifier_field
 
   ### ~~~ ABOUT PAGE ~~~ ###
