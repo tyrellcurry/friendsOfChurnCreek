@@ -1,7 +1,10 @@
+import fs from 'fs'
+import matter from 'gray-matter'
 import Head from 'next/head'
 import Link from 'next/link'
 
-export default function Home() {
+export default function Home({ content }) {
+  const homepageObj = content.find(item => item.slug === 'homepage');
   return (
     <>
       <Head>
@@ -20,7 +23,33 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="test">
+          <h1>{homepageObj.title}</h1>
+        </div>
       </div>
     </>
   )
+}
+
+export async function getStaticProps() {
+  // List of files in blgos folder
+  const filesInContent = fs.readdirSync('./content')
+
+  // Get the front matter and slug (the filename without .md) of all files
+  const content = filesInContent.map(filename => {
+    const file = fs.readFileSync(`./content/${filename}`, 'utf8')
+    const matterData = matter(file)
+
+    return {
+      ...matterData.data, // matterData.data contains front matter
+      slug: filename.slice(0, filename.indexOf('.'))
+    }
+  })
+
+  return {
+    props: {
+      content
+    }
+  }
+
 }
