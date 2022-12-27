@@ -19,11 +19,21 @@ collections:
     create: false # Disable users from creating new documents in this collection
     slug: "{{slug}}" # Filename template (used when targeting in index.js)
     fields: # The fields for each document
-      - {label: "Banner: Main Title", name: "title", widget: "string"}
-      - {label: "Banner: Subtitle", name: "subtitle", minimal: true, buttons: [], editor_components: [], modes: ['rich_text'], widget: "markdown"}
+      - {label: "Banner: Main Title", name: "title", minimal: true, buttons: ['bold','italic','link'], editor_components: [], modes: ['rich_text'], widget: "markdown"}
+      - {label: "Banner: Subtitle", name: "subtitle", minimal: true, buttons: ['bold','italic','link'], editor_components: [], modes: ['rich_text'], widget: "markdown"}
       - {label: "Banner: Background Image", name: "heroimage", choose_url: false, widget: "image"}
       - {label: "Introduction: Text", name: "introtext", minimal: true, buttons: ['bold','italic','link'], editor_components: [], modes: ['rich_text'], widget: "markdown"}
-      - {label: "(Do Not Edit)", name: "pagename", widget: "string"} # identifier_field
+      - label: "Documents"
+        name: "testimonials"
+        widget: "list"
+        summary: 'Upload your documents here'
+        fields:
+          - {label: Document Text, name: listitem, widget: markdown, minimal: true, buttons: ['bold','italic','link'], editor_components: [], modes: ['rich_text'], default: "Input your text here"}
+            - label: Document
+              name: document
+              widget: file
+              media_folder: public/documents
+      - {label: "*Important* (Do Not Edit)", name: "pagename", widget: "string"} # identifier_field
 
   ### ~~~ ABOUT PAGE ~~~ ###
   - name: "aboutPage" # Used in routes, e.g., /admin/collections/blog
