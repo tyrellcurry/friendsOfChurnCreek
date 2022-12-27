@@ -8,7 +8,7 @@ public_folder: "/uploads" # Where the media files can be accesed from the server
 
 collections:
   - name: "homePage" # Used in routes, e.g., /admin/collections/blog
-    identifier_field: Home Page Content
+    identifier_field: pagename
     editor:
         preview: false
     label: "Home Page" # Used in the UI
@@ -16,6 +16,7 @@ collections:
     create: false # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
+      - {label: "Home Page Content", name: "pagename", widget: "hidden"}
       - {label: "Page Title", name: "title", widget: "string"}
       - {label: "Sub Title", name: "subtitle", widget: "string"}
       - {label: "Featured Image", name: "blogimage", required: false, widget: "image"}
