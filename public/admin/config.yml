@@ -8,6 +8,7 @@ public_folder: "/uploads" # Where the media files can be accesed from the server
 
 collections:
   - name: "homePage" # Used in routes, e.g., /admin/collections/blog
+    identifier_field: Home Page Content
     editor:
         preview: false
     label: "Home Page" # Used in the UI
@@ -18,7 +19,9 @@ collections:
       - {label: "Page Title", name: "title", widget: "string"}
       - {label: "Sub Title", name: "subtitle", widget: "string"}
       - {label: "Featured Image", name: "blogimage", required: false, widget: "image"}
+
   - name: "aboutPage" # Used in routes, e.g., /admin/collections/blog
+    identifier_field: About Page Content
     editor:
         preview: false
     label: "About Page" # Used in the UI
