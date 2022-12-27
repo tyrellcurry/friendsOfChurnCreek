@@ -12,6 +12,8 @@ collections:
     editor:
         preview: false
     label: "Home Page" # Used in the UI
+    label_singular: "HomeeePageee"
+    delete: false
     folder: "/content/home" # The path to the folder where the documents are stored
     create: false # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
