@@ -12,15 +12,15 @@ collections:
     editor:
         preview: false
     label: "Home Page" # Used in the UI
-    label_singular: "HomeeePageee"
     delete: false
     folder: "/content/home" # The path to the folder where the documents are stored
     create: false # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Page Title", name: "title", widget: "string"}
-      - {label: "Sub Title", name: "subtitle", widget: "string"}
-      - {label: "Featured Image", name: "blogimage", required: false, widget: "image"}
+      - {label: "Banner: Main Title", name: "title", widget: "string"}
+      - {label: "Banner: Subtitle", name: "subtitle", widget: "string"}
+      - {label: "Banner: Background Image", name: "heroimage", widget: "image"}
+      - {label: "(Do Not Edit)", name: "pagename", widget: "string"}
 
   - name: "aboutPage" # Used in routes, e.g., /admin/collections/blog
     identifier_field: About Page Content

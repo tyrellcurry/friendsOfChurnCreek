@@ -6,6 +6,10 @@ export default function Document() {
         <Head>
           {/* Netlify Widget */}
           <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
+          <link rel="icon" href="/favicon.png" />
+          <meta name="description" content="Friends of Churn Creek Protected Area Society" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
         </Head>
         <body>
           <Main />
