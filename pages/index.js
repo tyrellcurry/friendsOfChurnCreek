@@ -29,12 +29,12 @@ export default function Home({ content }) {
             {homepageObj.introtext}
           </ReactMarkdown>
         </div>
-        <ul className="document-list">
-        {/* {homepageObj.documentcustom.map(document => (
-        <li key={document.slug}>
-          {document.listitem} Download the document <Link href={document.documentfile}>here</Link>
+        <ul className="document-list max-w-[800px]">
+        {homepageObj.documentcustom.map(document => (
+        <li key={document.slug} className='text-lg pt-5'>
+          {document.listitem} <br /> Download the document <Link href={document.documentfile} className='text-blue-800 text-semibold'>here</Link>
         </li>
-      ))} */}
+      ))}
         </ul>
       </div>
     </>
