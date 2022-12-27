@@ -20,7 +20,7 @@ collections:
     slug: "{{slug}}" # Filename template (used when targeting in index.js)
     fields: # The fields for each document
       - {label: "Banner: Main Title", name: "title", widget: "string"}
-      - {label: "Banner: Subtitle", name: "subtitle", minimal: true, buttons: ['bold','italic','link'], editor_components: [], modes: ['rich_text'], widget: "markdown"}
+      - {label: "Banner: Subtitle", name: "subtitle", minimal: true, buttons: [], editor_components: [], modes: ['rich_text'], widget: "markdown"}
       - {label: "Banner: Background Image", name: "heroimage", choose_url: false, widget: "image"}
       - {label: "Introduction: Text", name: "introtext", minimal: true, buttons: ['bold','italic','link'], editor_components: [], modes: ['rich_text'], widget: "markdown"}
       - {label: "(Do Not Edit)", name: "pagename", widget: "string"} # identifier_field
