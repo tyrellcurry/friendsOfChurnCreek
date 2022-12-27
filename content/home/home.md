@@ -13,10 +13,5 @@ introtext: Friends of Churn Creek Protected Area Society is a non-profit
   and wildlife of the Protected Area are of provincial and national
   significance. The area also has a long history of importance for First Nations
   people and **ranching culture.**
-testimonials:
-  - listitem: This is where document one is going.
-    documentfile: public/documents/pdf-test-1.pdf
-  - listitem: T﻿his is a second document going at this place!
-    documentfile: public/documents/pdf-test-2.pdf
 pagename: Home Page Content
 ---
