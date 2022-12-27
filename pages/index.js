@@ -14,14 +14,15 @@ export default function Home({ content }) {
         <div className="hero px-10vw py-20 bg-cover bg-center text-white" style={{backgroundImage:`url(${homepageObj.heroimage})`}}>
           <div className='pt-4'>
             <h1 className='text-7xl text-center'>{homepageObj.title}</h1>
-            <h2 className='text-2xl text-center pt-4'>Friends of Churn Creek Protected Area Society is a non-profit organization formed in 2009 to help BC Parks achieve the conservation and cultural heritage vision for Churn Creek Protected Area (CCPA).</h2>
+            <h2 className='text-2xl text-center pt-4'>{homepageObj.subtitle}</h2>
             <div className="btn text-center pt-7">
               <Link className='bg-slate-600 py-3 px-8 text-lg font-semibold' href="#about">Learn More</Link>
             </div>
           </div>
         </div>
-        <div className="test">
-          <h1></h1>
+        <div className="intro">
+          <h2>Introduction</h2>
+          <p>{homepageObj.introtext}</p>
         </div>
       </div>
     </>

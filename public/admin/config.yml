@@ -1,27 +1,31 @@
 backend:
   name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
+  branch: main # Branch CMS commits changes to
 
 media_folder: "public/uploads" # Where media files will be stored
 public_folder: "/uploads" # Where the media files can be accesed from the server
-# publish_mode: editorial_workflow # For Drafts
+# publish_mode: editorial_workflow # Enable for Draft Mode feature
 
 collections:
+
+  ### ~~~ HOME PAGE ~~~ ###
   - name: "homePage" # Used in routes, e.g., /admin/collections/blog
-    identifier_field: pagename
+    identifier_field: pagename # Field used for collection item title in UI
     editor:
         preview: false
     label: "Home Page" # Used in the UI
     delete: false
     folder: "/content/home" # The path to the folder where the documents are stored
-    create: false # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
+    create: false # Disable users from creating new documents in this collection
+    slug: "{{slug}}" # Filename template (used when targeting in index.js)
+    fields: # The fields for each document
       - {label: "Banner: Main Title", name: "title", widget: "string"}
       - {label: "Banner: Subtitle", name: "subtitle", widget: "string"}
-      - {label: "Banner: Background Image", name: "heroimage", widget: "image"}
-      - {label: "(Do Not Edit)", name: "pagename", widget: "string"}
+      - {label: "Banner: Background Image", name: "heroimage", choose_url: false, widget: "image"}
+      - {label: "Introduction: Text", name: "introtext", widget: "text"}
+      - {label: "(Do Not Edit)", name: "pagename", widget: "string"} # identifier_field
 
+  ### ~~~ ABOUT PAGE ~~~ ###
   - name: "aboutPage" # Used in routes, e.g., /admin/collections/blog
     identifier_field: About Page Content
     editor:
