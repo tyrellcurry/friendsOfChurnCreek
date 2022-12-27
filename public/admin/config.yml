@@ -26,7 +26,7 @@ collections:
       - label: "Documents"
         name: "testimonials"
         widget: "list"
-        summary: 'Upload your documents here'
+        summary: '{{fields.listitem}} - {{fields.documentfile}}'
         fields:
           - {label: Document Text, name: listitem, widget: markdown, minimal: true, buttons: ['bold','italic','link'], editor_components: [], modes: ['rich_text'], default: "Input your text here"}
           - {label: Document, name: documentfile, widget: file, media_folder: public/documents}
