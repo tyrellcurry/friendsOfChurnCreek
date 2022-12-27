@@ -1,7 +1,9 @@
 import fs from 'fs'
 import matter from 'gray-matter'
+import ReactMarkdown from 'react-markdown'
 import Head from 'next/head'
 import Link from 'next/link'
+import style from '../styles/Home.module.css'
 
 export default function Home({ content }) {
   const homepageObj = content.find(item => item.slug === 'home');
@@ -22,7 +24,9 @@ export default function Home({ content }) {
         </div>
         <div className="intro">
           <h2>Introduction</h2>
-          <p>{homepageObj.introtext}</p>
+          <ReactMarkdown className={style.reactmarkdown}>
+            {homepageObj.introtext}
+          </ReactMarkdown>
         </div>
       </div>
     </>
