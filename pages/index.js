@@ -7,6 +7,7 @@ import style from '../styles/Home.module.css'
 
 export default function Home({ content }) {
   const homepageObj = content.find(item => item.slug === 'home');
+  console.log(homepageObj.documentcustom);
   return (
     <>
       <Head>
@@ -28,6 +29,13 @@ export default function Home({ content }) {
             {homepageObj.introtext}
           </ReactMarkdown>
         </div>
+        <ul className="document-list">
+        {homepageObj.documentcustom.map(document => (
+        <li key={document.slug}>
+          {document.listitem} Download the document <Link href={document.documentfile}>here</Link>
+        </li>
+      ))}
+        </ul>
       </div>
     </>
   )
