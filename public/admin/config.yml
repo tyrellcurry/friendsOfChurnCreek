@@ -7,15 +7,25 @@ public_folder: "/uploads" # Where the media files can be accesed from the server
 # publish_mode: editorial_workflow # For Drafts
 
 collections:
-  - name: "home" # Used in routes, e.g., /admin/collections/blog
+  - name: "homePage" # Used in routes, e.g., /admin/collections/blog
     editor:
         preview: false
     label: "Home Page" # Used in the UI
-    folder: "/content" # The path to the folder where the documents are stored
+    folder: "/content/home" # The path to the folder where the documents are stored
     create: false # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Page Title", name: "title", widget: "string"}
       - {label: "Sub Title", name: "subtitle", widget: "string"}
       - {label: "Featured Image", name: "blogimage", required: false, widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "aboutPage" # Used in routes, e.g., /admin/collections/blog
+    editor:
+        preview: false
+    label: "About Page" # Used in the UI
+    folder: "/content/about" # The path to the folder where the documents are stored
+    create: false # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Page Title", name: "title", widget: "string"}
+      - {label: "Sub Title", name: "subtitle", widget: "string"}
+      - {label: "Featured Image", name: "blogimage", required: false, widget: "image"}

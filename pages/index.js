@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 export default function Home({ content }) {
-  const homepageObj = content.find(item => item.slug === 'homepage');
+  const homepageObj = content.find(item => item.slug === 'home');
   return (
     <>
       <Head>
@@ -16,7 +16,7 @@ export default function Home({ content }) {
       <div>
         <div className="hero px-10vw bg-hero-bg py-20 bg-cover bg-center text-white">
           <div className='pt-4'>
-            <h1 className='text-7xl text-center'>Friends Of Churn Creek</h1>
+            <h1 className='text-7xl text-center'>{homepageObj.title}</h1>
             <h2 className='text-2xl text-center pt-4'>Friends of Churn Creek Protected Area Society is a non-profit organization formed in 2009 to help BC Parks achieve the conservation and cultural heritage vision for Churn Creek Protected Area (CCPA).</h2>
             <div className="btn text-center pt-7">
               <Link className='bg-slate-600 py-3 px-8 text-lg font-semibold' href="#about">Learn More</Link>
@@ -24,7 +24,7 @@ export default function Home({ content }) {
           </div>
         </div>
         <div className="test">
-          <h1>{homepageObj.title}</h1>
+          <h1></h1>
         </div>
       </div>
     </>
@@ -32,12 +32,12 @@ export default function Home({ content }) {
 }
 
 export async function getStaticProps() {
-  // List of files in blgos folder
-  const filesInContent = fs.readdirSync('./content')
+  // Finds files in folder
+  const filesInContent = fs.readdirSync('./content/home')
 
   // Get the front matter and slug (the filename without .md) of all files
   const content = filesInContent.map(filename => {
-    const file = fs.readFileSync(`./content/${filename}`, 'utf8')
+    const file = fs.readFileSync(`./content/home/${filename}`, 'utf8')
     const matterData = matter(file)
 
     return {
