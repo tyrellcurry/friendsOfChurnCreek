@@ -6,3 +6,9 @@
 .reactmarkdown a:hover {
     text-decoration: underline;
 }
+
+.reactmarkdown p {
+    font-size: 1.15rem;
+    text-align: center;
+    padding-top: 1.5rem;
+}

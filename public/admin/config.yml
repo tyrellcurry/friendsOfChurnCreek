@@ -23,13 +23,22 @@ collections:
       - {label: "Banner: Subtitle", name: "subtitle", minimal: true, buttons: ['bold','italic','link'], editor_components: [], modes: ['rich_text'], widget: "markdown"}
       - {label: "Banner: Background Image", name: "heroimage", choose_url: false, widget: "image"}
       - {label: "Introduction: Text", name: "introtext", minimal: true, buttons: ['bold','italic','link'], editor_components: [], modes: ['rich_text'], widget: "markdown"}
-      - label: "Documents"
-        name: "documentcustom"
+      - {label: "Principal Goals: Left Image", name: "principalimg", choose_url: false, widget: "image"}
+
+      - label: "Our principal goals:"
+        name: "principalgoals"
+        widget: "list"
+        summary: '{{fields.listitem}}'
+        fields:
+          - {label: List Item, name: listitem, widget: "text"}
+      - label: "Downloadable Documents List"
+        name: "documentlist"
         widget: "list"
         summary: '{{fields.listitem}} - {{fields.documentfile}}'
         fields:
-          - {label: Document Text, name: listitem, widget: markdown, minimal: true, buttons: ['bold','italic','link'], editor_components: [], modes: ['rich_text'], default: "Input your text here"}
-          - {label: Document, name: documentfile, choose_url: false, widget: file}
+          - {label: Link Text, name: linktext, widget: "string"}
+          - {label: Document, name: documentfile, choose_url: false, required: false, widget: file}
+          - {label: Website Link (if not uploading document), name: urllink, required: false, widget: "string"}
       - {label: "*Important* (Do Not Edit)", name: "pagename", widget: "string"} # identifier_field
 
   ### ~~~ ABOUT PAGE ~~~ ###
