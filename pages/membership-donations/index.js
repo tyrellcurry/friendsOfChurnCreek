@@ -2,9 +2,9 @@ import fs from 'fs'
 import matter from 'gray-matter'
 
 const index = ({content}) => {
-  const resourcesObj = content.find(item => item.slug === 'resources');
+  const membershipDonationsObj = content.find(item => item.slug === 'membershipdonations');
   return (
-    <div>{resourcesObj.title}</div>
+    <div>{membershipDonationsObj.title}</div>
   )
 }
 
@@ -13,11 +13,11 @@ export default index
 
 export async function getStaticProps() {
   // Finds files in folder
-  const filesInContent = fs.readdirSync('./content/resources')
+  const filesInContent = fs.readdirSync('./content/membershipdonations')
 
   // Get the front matter and slug (the filename without .md) of all files
   const content = filesInContent.map(filename => {
-    const file = fs.readFileSync(`./content/resources/${filename}`, 'utf8')
+    const file = fs.readFileSync(`./content/membershipdonations/${filename}`, 'utf8')
     const matterData = matter(file)
 
     return {

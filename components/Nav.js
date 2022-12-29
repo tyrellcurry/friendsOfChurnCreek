@@ -66,7 +66,7 @@ const Nav = () => {
                         <li>
                             <Link
                                 className="link font-semibold hover:text-teal-800 text-lg"
-                                href="/donations">
+                                href="/membership-donations">
                                 Memberships
                             </Link>
                         </li>
@@ -89,7 +89,7 @@ const Nav = () => {
                 <div className="mobile-menu hidden flex lg:flex flex-col py-5 items-center lg:p-0 lg:flex-row">
                     <Link
                         className="link rounded-full bg-teal-700 px-9 py-2 font-semibold hover:bg-teal-600 text-white text-lg"
-                        href="/donations">
+                        href="/membership-donations">
                         Give
                     </Link>
                 </div>

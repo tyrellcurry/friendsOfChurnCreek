@@ -1,4 +1,5 @@
 ---
-title: Friends Of Churn Creek About Page
-subtitle: This is a subtitle
+title: Churn Creek Protected Area
+bannerimg: /uploads/ChurnCrPA_W1a.jpg
+firstsectiontext: Churn Creek Protected Area (CCPA).
 ---

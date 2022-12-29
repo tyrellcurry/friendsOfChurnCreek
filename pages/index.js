@@ -35,13 +35,13 @@ export default function Home({ content }) {
             </div>
           </div>
         </div>
-        <div className="intro px-10vw pt-10">
+        <div className="intro px-10vw pt-14">
           <h2 className="text-4xl uppercase text-center">Introduction</h2>
           <ReactMarkdown className={style.reactmarkdown}>
             {homepageObj.introtext}
           </ReactMarkdown>
         </div>
-        <section className="px-10vw pt-5 lg:pt-12 lg:flex xl:items-center lg:gap-10">
+        <section className="px-10vw py-14 lg:flex xl:items-center lg:gap-10">
           <div className="left pb-5">
             <Image
               className="w-full h-auto max-w-[650px] md:min-w-[400px]"
