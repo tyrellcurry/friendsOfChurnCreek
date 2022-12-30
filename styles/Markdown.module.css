@@ -1,0 +1,14 @@
+/* About Page */
+.about_reactmarkdown a {
+  font-size: 1.15rem;
+  color: blue;
+}
+
+.about_reactmarkdown a:hover {
+  text-decoration: underline;
+}
+
+.about_reactmarkdown p {
+  font-size: 1.15rem;
+  padding-top: 1.5rem;
+}

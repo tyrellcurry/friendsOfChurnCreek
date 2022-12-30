@@ -3,7 +3,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <footer className="px-10vw text-center py-6 bg-slate-300">
+      <footer className="px-[5vw] text-center py-6 bg-gray-300 md:px-10vw">
         <p>
         © Friends of Churn Creek Protected Area Society
         </p>
