@@ -7,82 +7,223 @@ public_folder: "/uploads" # Where the media files can be accesed from the server
 # publish_mode: editorial_workflow # Enable for Draft Mode feature
 
 collections:
-
   ### ~~~ HOME PAGE ~~~ ###
   - name: "homePage" # Used in routes, e.g., /admin/collections/blog
     identifier_field: pagename # Field used for collection item title in UI
     editor:
-        preview: false
+      preview: false
     label: "Home Page" # Used in the UI
     delete: false
     folder: "/content/home" # The path to the folder where the documents are stored
     create: false # Disable users from creating new documents in this collection
     slug: "{{slug}}" # Filename template (used when targeting in index.js)
     fields: # The fields for each document
-      - {label: "Banner: Main Title", name: "title", minimal: true, buttons: ['bold','italic','link'], editor_components: [], modes: ['rich_text'], widget: "markdown"}
-      - {label: "Banner: Subtitle", name: "subtitle", minimal: true, buttons: ['bold','italic','link'], editor_components: [], modes: ['rich_text'], widget: "markdown"}
-      - {label: "Banner: Background Image", name: "heroimage", choose_url: false, widget: "image"}
-      - {label: "Introduction: Text", name: "introtext", minimal: true, buttons: ['bold','italic','link'], editor_components: [], modes: ['rich_text'], widget: "markdown"}
-      - {label: "Principal Goals: Left Image", name: "principalimg", choose_url: false, widget: "image"}
+      - {
+          label: "Banner: Main Title",
+          name: "title",
+          minimal: true,
+          buttons: ["bold", "italic", "link"],
+          editor_components: [],
+          modes: ["rich_text"],
+          widget: "markdown",
+        }
+      - {
+          label: "Banner: Subtitle",
+          name: "subtitle",
+          minimal: true,
+          buttons: ["bold", "italic", "link"],
+          editor_components: [],
+          modes: ["rich_text"],
+          widget: "markdown",
+        }
+      - {
+          label: "Banner: Background Image",
+          name: "heroimage",
+          choose_url: false,
+          widget: "image",
+        }
+      - {
+          label: "Introduction: Text",
+          name: "introtext",
+          minimal: true,
+          buttons: ["bold", "italic", "link"],
+          editor_components: [],
+          modes: ["rich_text"],
+          widget: "markdown",
+        }
+      - {
+          label: "Principal Goals: Left Image",
+          name: "principalimg",
+          choose_url: false,
+          widget: "image",
+        }
 
       - label: "Principal Goals"
         name: "principalgoals"
         widget: "list"
-        summary: '{{fields.listitem}}'
+        summary: "{{fields.listitem}}"
         fields:
-          - {label: List Item, name: listitem, widget: "text"}
+          - { label: List Item, name: listitem, widget: "text" }
       - label: "Downloadable Documents"
         name: "documentlist"
         widget: "list"
-        summary: '{{fields.linktext}} - {{fields.documentfile}}'
+        summary: "{{fields.linktext}} - {{fields.documentfile}}"
         fields:
-          - {label: Link Text, name: linktext, widget: "string"}
-          - {label: Document, name: documentfile, choose_url: false, required: false, widget: file}
-          - {label: Website Link (if not uploading document), name: urllink, required: false, widget: "string"}
-      - {label: "*Important* (Do Not Edit)", name: "pagename", widget: "string"} # identifier_field
+          - { label: Link Text, name: linktext, widget: "string" }
+          - {
+              label: Document,
+              name: documentfile,
+              choose_url: false,
+              required: false,
+              widget: file,
+            }
+          - {
+              label: Website Link (if not uploading document),
+              name: urllink,
+              required: false,
+              widget: "string",
+            }
+      - {
+          label: "*Important* (Do Not Edit)",
+          name: "pagename",
+          widget: "string",
+        } # identifier_field
 
   ### ~~~ ABOUT PAGE ~~~ ###
   - name: "aboutPage" # Used in routes, e.g., /admin/collections/blog
     identifier_field: pagename # Field used for collection item title in UI
     editor:
-        preview: false
+      preview: false
     label: "About Page" # Used in the UI
     delete: false
     folder: "/content/about" # The path to the folder where the documents are stored
     create: false # Disable users from creating new documents in this collection
     slug: "{{slug}}" # Filename template (used when targeting in index.js)
     fields: # The fields for each document
-      - {label: "Main Title", name: "title", minimal: true, buttons: ['bold','italic','link'], editor_components: [], modes: ['rich_text'], widget: "markdown"}
-      - {label: "Banner: Image", name: "bannerimg", choose_url: false, widget: "image"}
-      - {label: "First Section: Text", name: "firstsectiontext", minimal: true, buttons: ['bold','italic','link'], editor_components: [], modes: ['rich_text'], widget: "markdown"}
-      - {label: "First Section: Image", name: "firstsectionimg", choose_url: false, widget: "image"}
-      - {label: "Second Section: Text", name: "secondsectiontext", minimal: true, buttons: ['bold','italic','link'], editor_components: [], modes: ['rich_text'], widget: "markdown"}
-      - {label: "Second Section: Image", name: "secondsectionimg", choose_url: false, widget: "image"}
-      - {label: "Third Section: Text", name: "thirdsectiontext", minimal: true, buttons: ['bold','italic','link'], editor_components: [], modes: ['rich_text'], widget: "markdown"}
-      - {label: "Third Section: Image", name: "thirdsectionimg", choose_url: false, widget: "image"}
-    - {label: "*Important* (Do Not Edit)", name: "pagename", widget: "string"} # identifier_field
+      - {
+          label: "Main Title",
+          name: "title",
+          minimal: true,
+          buttons: ["bold", "italic", "link"],
+          editor_components: [],
+          modes: ["rich_text"],
+          widget: "markdown",
+        }
+      - {
+          label: "Banner: Image",
+          name: "bannerimg",
+          choose_url: false,
+          widget: "image",
+        }
+      - {
+          label: "First Section: Text",
+          name: "firstsectiontext",
+          minimal: true,
+          buttons: ["bold", "italic", "link"],
+          editor_components: [],
+          modes: ["rich_text"],
+          widget: "markdown",
+        }
+      - {
+          label: "First Section: Image",
+          name: "firstsectionimg",
+          choose_url: false,
+          widget: "image",
+        }
+      - {
+          label: "Second Section: Text",
+          name: "secondsectiontext",
+          minimal: true,
+          buttons: ["bold", "italic", "link"],
+          editor_components: [],
+          modes: ["rich_text"],
+          widget: "markdown",
+        }
+      - {
+          label: "Second Section: Image",
+          name: "secondsectionimg",
+          choose_url: false,
+          widget: "image",
+        }
+      - {
+          label: "Third Section: Text",
+          name: "thirdsectiontext",
+          minimal: true,
+          buttons: ["bold", "italic", "link"],
+          editor_components: [],
+          modes: ["rich_text"],
+          widget: "markdown",
+        }
+      - {
+          label: "Third Section: Image",
+          name: "thirdsectionimg",
+          choose_url: false,
+          widget: "image",
+        }
+      - {
+          label: "*Important* (Do Not Edit)",
+          name: "pagename",
+          widget: "string",
+        } # identifier_field
 
     ### ~~~ Projects PAGE ~~~ ###
   - name: "projectsPage" # Used in routes, e.g., /admin/collections/blog
     identifier_field: pagename # Field used for collection item title in UI
     editor:
-        preview: false
+      preview: false
     label: "Projects Page" # Used in the UI
     delete: false
     folder: "/content/projects" # The path to the folder where the documents are stored
     create: false # Disable users from creating new documents in this collection
     slug: "{{slug}}" # Filename template (used when targeting in index.js)
     fields: # The fields for each document
-      - {label: "Main Title", name: "title", minimal: true, buttons: ['bold','italic','link'], editor_components: [], modes: ['rich_text'], widget: "markdown"}
-      - {label: "Banner: Image", name: "bannerimg", choose_url: false, widget: "image"}
-      - {label: "First Section: Text", name: "firstsectiontext", minimal: true, buttons: ['bold','italic','link'], editor_components: [], modes: ['rich_text'], widget: "markdown"}
+      - {
+          label: "Main Title",
+          name: "title",
+          minimal: true,
+          buttons: ["bold", "italic", "link"],
+          editor_components: [],
+          modes: ["rich_text"],
+          widget: "markdown",
+        }
+      - {
+          label: "Banner: Image",
+          name: "bannerimg",
+          choose_url: false,
+          widget: "image",
+        }
+      - {
+          label: "First Section: Text",
+          name: "firstsectiontext",
+          minimal: true,
+          buttons: ["bold", "italic", "link"],
+          editor_components: [],
+          modes: ["rich_text"],
+          widget: "markdown",
+        }
       - label: "Projects List"
-        name: "principalgoals"
+        name: "projectslist"
         widget: "list"
-        summary: '{{fields.listitem}}'
+        summary: "{{fields.listitem}}"
         fields:
-          - {label: List Item: Title, name: listitemtitle, widget: "text"}
-          - {label: List Item: Text, name: listitemtext, minimal: true, buttons: ['bold','italic','link'], editor_components: [], modes: ['rich_text'], widget: "markdown"}
-          - {label: "List Item: Image", name: "listitemimg", choose_url: false, widget: "image"}
-          
-    - {label: "*Important* (Do Not Edit)", name: "pagename", widget: "string"} # identifier_field
+          - { label: "List Item: Title", name: listitemtitle, widget: "text" }
+          - {
+              label: "List Item: Text",
+              name: listitemtext,
+              minimal: true,
+              buttons: ["bold", "italic", "link"],
+              editor_components: [],
+              modes: ["rich_text"],
+              widget: "markdown",
+            }
+          - {
+              label: "List Item: Image",
+              name: "listitemimg",
+              choose_url: false,
+              widget: "image",
+            }
+      - {
+          label: "*Important* (Do Not Edit)",
+          name: "pagename",
+          widget: "string",
+        } # identifier_field
