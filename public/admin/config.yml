@@ -206,7 +206,15 @@ collections:
         widget: "list"
         summary: "{{fields.listitem}}"
         fields:
-          - { label: "List Item: Title", name: listitemtitle, widget: "text" }
+          - {
+              label: "List Item: Title",
+              name: listitemtitle,
+              minimal: true,
+              buttons: ["bold", "italic", "link"],
+              editor_components: [],
+              modes: ["rich_text"],
+              widget: "markdown",
+            }
           - {
               label: "List Item: Text",
               name: listitemtext,
