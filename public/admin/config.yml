@@ -201,13 +201,13 @@ collections:
           modes: ["rich_text"],
           widget: "markdown",
         }
-      - label: "Projects List"
+      - label: "Projects"
         name: "projectslist"
         widget: "list"
         summary: "{{fields.listitem}}"
         fields:
           - {
-              label: "List Item: Title",
+              label: "Title",
               name: listitemtitle,
               minimal: true,
               buttons: ["bold", "italic", "link"],
@@ -216,7 +216,7 @@ collections:
               widget: "markdown",
             }
           - {
-              label: "List Item: Text",
+              label: "Text",
               name: listitemtext,
               minimal: true,
               buttons: ["bold", "italic", "link"],
@@ -224,12 +224,18 @@ collections:
               modes: ["rich_text"],
               widget: "markdown",
             }
-          - {
-              label: "List Item: Image",
-              name: "listitemimg",
-              choose_url: false,
-              widget: "image",
-            }
+          - label: "Images"
+            name: "imageslist"
+            widget: "list"
+            summary: "{{fields.listitem}}"
+            fields:
+              - {
+                  label: "Image",
+                  name: "listitemimg",
+                  choose_url: false,
+                  widget: "image",
+                }
+
       - {
           label: "*Important* (Do Not Edit)",
           name: "pagename",
