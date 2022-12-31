@@ -281,7 +281,7 @@ collections:
         name: "eventslist"
         widget: "list"
         create: false
-        summary: "{{fields.eventdate}} - {{fields.eventtext}}"
+        summary: "Event: {{fields.eventtext}}"
         fields:
           - {
               label: "Event Date",
@@ -293,6 +293,12 @@ collections:
               picker_utc: false,
             }
           - {
+              label: "Event Time eg. 10:30am",
+              name: eventtime,
+              default: "10:30am",
+              widget: "string",
+            }
+          - {
               label: "Event Text",
               name: eventtext,
               minimal: true,
@@ -300,12 +306,6 @@ collections:
               editor_components: [],
               modes: ["rich_text"],
               widget: "markdown",
-            }
-          - {
-              label: "Event Time",
-              name: eventtime,
-              default: "10:30am",
-              widget: "string",
             }
       - {
           label: "*Important* (Do Not Edit)",
