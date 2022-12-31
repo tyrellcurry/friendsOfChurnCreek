@@ -35,7 +35,7 @@ const index = ({ content }) => {
           <div class="accordion pt-5" id="accordianMain">
             {projectsObj.projectslist.length > 0 &&
               projectsObj.projectslist.map((project, i) => (
-                <div class="accordion-item bg-gray-100 border border-gray-200">
+                <div key={i} class="accordion-item bg-gray-100 border border-gray-200">
                   <h2 class="accordion-header mb-0" id={`heading${i}`}>
                     <button
                       class={`
@@ -88,6 +88,7 @@ const index = ({ content }) => {
                               project.imageslist.map((image, i) =>
                                 i < project.imageslist.length - 1 ? (
                                   <button
+                                    key={i}
                                     type="button"
                                     data-bs-target={`#carousel${i}`}
                                     data-bs-slide-to={`${i + 1}`}
