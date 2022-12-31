@@ -288,7 +288,7 @@ collections:
               name: eventdate,
               widget: "datetime",
               date_format: "DD.MM.YYYY",
-              time_format: "HH:mm",
+              time_format: false,
               format: "LLL",
               picker_utc: false,
             }
@@ -300,6 +300,12 @@ collections:
               editor_components: [],
               modes: ["rich_text"],
               widget: "markdown",
+            }
+          - {
+              label: "Event Time",
+              name: eventtime,
+              default: "10:30am",
+              widget: "string",
             }
       - {
           label: "*Important* (Do Not Edit)",
