@@ -1,7 +1,6 @@
 import fs from "fs";
 import matter from "gray-matter";
 import Head from "next/head";
-import "tw-elements";
 import Style from "../../styles/Custom.module.css";
 
 const index = ({ content }) => {
