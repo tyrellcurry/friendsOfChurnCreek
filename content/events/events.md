@@ -9,5 +9,6 @@ firstsectiontext: FCCPAS organizes hikes for members each summer and also
 eventslist:
   - eventdate: February 25, 2023 10:23 PM
     eventtext: This is a test hike event for testing purposes.
+    eventtime: 10:30am
 pagename: Events & Activities Page Content
 ---
