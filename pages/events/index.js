@@ -1,9 +1,9 @@
-import fs from 'fs'
-import matter from 'gray-matter'
-import Head from 'next/head';
+import fs from "fs";
+import matter from "gray-matter";
+import Head from "next/head";
 
-const index = ({content}) => {
-  const eventsObj = content.find(item => item.slug === 'events');
+const index = ({ content }) => {
+  const eventsObj = content.find((item) => item.slug === "events");
   return (
     <>
       <Head>
@@ -25,38 +25,41 @@ const index = ({content}) => {
       </header>
       <section>
         <h2>Upcoming Events</h2>
+        {eventsObj.eventslist.length > 0 &&
+          eventsObj.eventslist.map((event, i) => (
+            <div key={i}>
+              <p>{event.eventdate}</p>
+              <p>{event.eventtext}</p>
+            </div>
+          ))}
       </section>
       <section>
-        <h2>
-          {eventsObj.firstsectiontext}
-        </h2>
+        <h2>{eventsObj.firstsectiontext}</h2>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default index
-
+export default index;
 
 export async function getStaticProps() {
   // Finds files in folder
-  const filesInContent = fs.readdirSync('./content/events')
+  const filesInContent = fs.readdirSync("./content/events");
 
   // Get the front matter and slug (the filename without .md) of all files
-  const content = filesInContent.map(filename => {
-    const file = fs.readFileSync(`./content/events/${filename}`, 'utf8')
-    const matterData = matter(file)
+  const content = filesInContent.map((filename) => {
+    const file = fs.readFileSync(`./content/events/${filename}`, "utf8");
+    const matterData = matter(file);
 
     return {
       ...matterData.data, // matterData.data contains front matter
-      slug: filename.slice(0, filename.indexOf('.'))
-    }
-  })
+      slug: filename.slice(0, filename.indexOf(".")),
+    };
+  });
 
   return {
     props: {
-      content
-    }
-  }
-
+      content,
+    },
+  };
 }
