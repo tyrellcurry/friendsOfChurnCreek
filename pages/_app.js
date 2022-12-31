@@ -1,8 +1,15 @@
 import "../styles/globals.css";
 import Layout from "../components/Layout";
 import Head from "next/head";
+import { useEffect } from "react";
 
 export default function App({ Component, pageProps }) {
+  useEffect(() => {
+    const use = async () => {
+      (await import('tw-elements')).default;
+        };
+        use();
+      }, []);
   return (
     <>
       <Head>

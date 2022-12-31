@@ -10,7 +10,7 @@ const index = ({ content }) => {
   return (
     <>
       <Head>
-      <title>About | Friends of Church Creek | Protected Area Society</title>
+        <title>About | Friends of Church Creek | Protected Area Society</title>
       </Head>
       <header
         className="px-[5vw] bg-cover bg-center w-full md:px-10vw "
@@ -24,7 +24,7 @@ const index = ({ content }) => {
           {aboutObj.title}
         </h1>
       </header>
-      <section className="px-[5vw] pt-3 pb-10 md:px-10vw lg:py-14">
+      <section className="px-[5vw] py-10 md:px-10vw lg:py-14">
         <div className="max-w-[1225px] m-auto lg:flex lg:justify-center lg:bg-gray-200 lg:p-10 lg:py-14">
           <div className="left">
             <div className="max-w-[750px]">
@@ -33,7 +33,7 @@ const index = ({ content }) => {
               </ReactMarkdown>
             </div>
           </div>
-          <div className="right flex lg:justify-end items-center pt-10 lg:pt-0 lg:pl-14">
+          <div className="right flex lg:justify-end pt-10 lg:pt-0 lg:pl-14">
             <Image
               className="w-full lg:min-w-[350px] max-w-[350px] self-center"
               src={aboutObj.firstsectionimg}
@@ -43,7 +43,7 @@ const index = ({ content }) => {
           </div>
         </div>
         <div className="max-w-[1225px] m-auto flex flex-col-reverse mt-4 md:mt-10 lg:flex lg:flex-row lg:justify-center lg:bg-neutral-200 lg:p-10 lg:py-14">
-          <div className="left flex items-center pt-10 lg:pt-0">
+          <div className="left flex pt-10 lg:pt-0">
             <Image
               className="w-full lg:min-w-[350px] max-w-[450px] self-center"
               src={aboutObj.secondsectionimg}
@@ -67,7 +67,7 @@ const index = ({ content }) => {
               </ReactMarkdown>
             </div>
           </div>
-          <div className="right flex lg:justify-end items-center pt-10 lg:pt-0 lg:pl-14">
+          <div className="right flex lg:justify-end pt-10 lg:pt-0 lg:pl-14">
             <Image
               className="w-full lg:min-w-[350px] max-w-[450px] self-center"
               src={aboutObj.thirdsectionimg}

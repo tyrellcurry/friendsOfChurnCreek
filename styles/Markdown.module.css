@@ -12,3 +12,7 @@
   font-size: 1.15rem;
   padding-top: 1.5rem;
 }
+.about_reactmarkdown p:first-child {
+  font-size: 1.15rem;
+  padding-top: 0rem;
+}

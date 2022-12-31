@@ -204,6 +204,7 @@ collections:
       - label: "Projects"
         name: "projectslist"
         widget: "list"
+        create: false
         summary: "{{fields.listitem}}"
         fields:
           - {
@@ -235,7 +236,71 @@ collections:
                   choose_url: false,
                   widget: "image",
                 }
+      - {
+          label: "*Important* (Do Not Edit)",
+          name: "pagename",
+          widget: "string",
+        } # identifier_field
 
+    ### ~~~ Events & Activities PAGE ~~~ ###
+  - name: "eventsPage" # Used in routes, e.g., /admin/collections/blog
+    identifier_field: pagename # Field used for collection item title in UI
+    editor:
+      preview: false
+    label: "Events Page" # Used in the UI
+    delete: false
+    folder: "/content/events" # The path to the folder where the documents are stored
+    create: false # Disable users from creating new documents in this collection
+    slug: "{{slug}}" # Filename template (used when targeting in index.js)
+    fields: # The fields for each document
+      - {
+          label: "Main Title",
+          name: "title",
+          minimal: true,
+          buttons: ["bold", "italic", "link"],
+          editor_components: [],
+          modes: ["rich_text"],
+          widget: "markdown",
+        }
+      - {
+          label: "Banner: Image",
+          name: "bannerimg",
+          choose_url: false,
+          widget: "image",
+        }
+      - {
+          label: "First Section: Text",
+          name: "firstsectiontext",
+          minimal: true,
+          buttons: ["bold", "italic", "link"],
+          editor_components: [],
+          modes: ["rich_text"],
+          widget: "markdown",
+        }
+      - label: "Events"
+        name: "eventslist"
+        widget: "list"
+        create: false
+        summary: "{{fields.listitem}}"
+        fields:
+          - {
+              label: "Date",
+              name: eventdate,
+              widget: "datetime",
+              date_format: "DD.MM.YYYY",
+              format: "LLL",
+              time_format: false,
+              picker_utc: false
+            }
+          - {
+              label: "Text",
+              name: eventtext,
+              minimal: true,
+              buttons: ["bold", "italic", "link"],
+              editor_components: [],
+              modes: ["rich_text"],
+              widget: "markdown",
+            }
       - {
           label: "*Important* (Do Not Edit)",
           name: "pagename",
