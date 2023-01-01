@@ -28,7 +28,7 @@ const index = ({ content }) => {
         </h1>
       </header>
       <section className="px-[5vw] md:px-10vw text-center text-2xl font-medium py-12 bg-gray-50">
-        <h2 className="">"Thank you for considering membership with the Friends of Churn Creek P.A. Society."</h2>
+        <h2>&quot;Thank you for considering membership with the Friends of Churn Creek P.A. Society.&quot;</h2>
       </section>
       <section className="px-[5vw] text-center md:px-10vw py-10 bg-gray-200">
         <div className="md:flex">
