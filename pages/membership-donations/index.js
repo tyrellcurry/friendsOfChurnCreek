@@ -36,7 +36,7 @@ const index = ({ content }) => {
             <h2 className="text-3xl font-medium pb-7">Make a Donation Today</h2>
             <div>
               <Link
-                href={"https://www.paypal.com/donate/buttons/partner"}
+                href={membershipDonationsObj.donationlink}
                 target="_blank">
                 <button
                   type="button"
@@ -63,7 +63,7 @@ const index = ({ content }) => {
           <div className="right md:w-1/2 md:px-5">
             <h2 className="text-3xl font-medium pb-7">Become A Member</h2>
             <Link
-              href={"https://www.paypal.com/donate/buttons/partner"}
+              href={membershipDonationsObj.membershiplink}
               target="_blank">
               <button
                 type="button"
@@ -77,16 +77,13 @@ const index = ({ content }) => {
               Individual membership fees:
             </h3>
             <ul className="text-lg">
-              <li className="pt-1">Single Membership: $20.00</li>
-              <li className="pt-1">Family Membership: $30.00</li>
+              <li className="pt-1">Single Membership: {membershipDonationsObj.singlemembership}</li>
+              <li className="pt-1">Family Membership: {membershipDonationsObj.familymembership}</li>
             </ul>
           </div>
         </div>
         <p className="pt-20 md:w-1/2 m-auto italic text-sm">
-          Friends of Churn Creek Protected Area Society is a registered charity
-          under the Income Tax Act of Canada (registration number 85431 1453
-          RR0001). Receipts for income tax purposes will be sent for all
-          donations of $20 or greater or as requested.
+          {membershipDonationsObj.bottomnotice}
         </p>
       </section>
       <section></section>

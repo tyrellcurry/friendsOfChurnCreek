@@ -351,25 +351,43 @@ collections:
           widget: "image",
         }
       - {
-          label: "First Section: Text",
-          name: "firstsectiontext",
+          label: "Donation Link",
+          name: "donationlink",
+          widget: "string",
+        }
+      - {
+          label: "Membership Link",
+          name: "membershiplink",
+          widget: "string",
+        }
+      - {
+          label: "Single Membership Fee",
+          name: "singlemembership",
+          widget: "string",
+        }
+      - {
+          label: "Family Membership Fee",
+          name: "familymembership",
+          widget: "string",
+        }
+      - {
+          label: "Mailing Address",
+          name: "mailingaddress",
+          minimal: true,
+          buttons: ["bold", "italic", "link"],
+          editor_components: [],
+          modes: ["rich_text"],
+          widget: "markdown",
+      }
+      - {
+          label: "Bottom Notice Text",
+          name: "bottomnotice",
           minimal: true,
           buttons: ["bold", "italic", "link"],
           editor_components: [],
           modes: ["rich_text"],
           widget: "markdown",
         }
-      - label: "Activity Images"
-        name: "activityimages"
-        widget: "list"
-        summary: "{{fields.image}}"
-        fields:
-          - {
-              label: "Image",
-              name: "image",
-              choose_url: false,
-              widget: "image",
-            }
       - {
           label: "*Important* (Do Not Edit)",
           name: "pagename",
