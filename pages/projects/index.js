@@ -27,14 +27,14 @@ const index = ({ content }) => {
       </header>
       <section className="px-[5vw] py-14 md:px-10vw">
         <h2 className="text-lg">{projectsObj.firstsectiontext}</h2>
-        <div className="max-w-[1100px] pt-5">
+        <div className="max-w-[1100px] pt-10">
           <h2 className="text-2xl font-medium pt-5">
             Projects fall primarily within three categories:
           </h2>
           <div class="accordion pt-5" id="accordianMain">
             {projectsObj.projectslist.length > 0 &&
               projectsObj.projectslist.map((project, i) => (
-                <div key={i} class="accordion-item bg-gray-100 border border-gray-200">
+                <div key={i} class="accordion-item border border-gray-200">
                   <h2 class="accordion-header mb-0" id={`heading${i}`}>
                     <button
                       class={`

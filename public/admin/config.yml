@@ -293,7 +293,7 @@ collections:
               picker_utc: false,
             }
           - {
-              label: "Event Time eg. 10:30am",
+              label: "Event Time - Example: 10:30am",
               name: eventtime,
               default: "10:30am",
               widget: "string",
@@ -306,6 +306,69 @@ collections:
               editor_components: [],
               modes: ["rich_text"],
               widget: "markdown",
+            }
+      - label: "Activity Images"
+        name: "activityimages"
+        widget: "list"
+        summary: "{{fields.image}}"
+        fields:
+          - {
+              label: "Image",
+              name: "image",
+              choose_url: false,
+              widget: "image",
+            }
+      - {
+          label: "*Important* (Do Not Edit)",
+          name: "pagename",
+          widget: "string",
+        } # identifier_field
+
+    ### ~~~ Membership PAGE ~~~ ###
+  - name: "membershipPage" # Used in routes, e.g., /admin/collections/blog
+    identifier_field: pagename # Field used for collection item title in UI
+    editor:
+      preview: false
+    label: "Membership & Donations Page" # Used in the UI
+    delete: false
+    folder: "/content/membership-donations" # The path to the folder where the documents are stored
+    create: false # Disable users from creating new documents in this collection
+    slug: "{{slug}}" # Filename template (used when targeting in index.js)
+    fields: # The fields for each document
+      - {
+          label: "Main Title",
+          name: "title",
+          minimal: true,
+          buttons: ["bold", "italic", "link"],
+          editor_components: [],
+          modes: ["rich_text"],
+          widget: "markdown",
+        }
+      - {
+          label: "Banner: Image",
+          name: "bannerimg",
+          choose_url: false,
+          widget: "image",
+        }
+      - {
+          label: "First Section: Text",
+          name: "firstsectiontext",
+          minimal: true,
+          buttons: ["bold", "italic", "link"],
+          editor_components: [],
+          modes: ["rich_text"],
+          widget: "markdown",
+        }
+      - label: "Activity Images"
+        name: "activityimages"
+        widget: "list"
+        summary: "{{fields.image}}"
+        fields:
+          - {
+              label: "Image",
+              name: "image",
+              choose_url: false,
+              widget: "image",
             }
       - {
           label: "*Important* (Do Not Edit)",
