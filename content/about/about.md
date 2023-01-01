@@ -15,7 +15,7 @@ secondsectiontext: >-
 
 
   Secwepemc (Shuswap) people have been a part of the CCPA landscape for thousands of years. The Tcexwe’ptem (Empire Valley) band occupied the area until 1862 when most died of smallpox and survivors moved across the Fraser River to join other bands. Today, the area continues to be important for people of the Stswecem’c (Canoe Creek), Xgat’tem (Dog Creek), and Esk’et (Alkali) communities. Evidence of early Secwepemc occupation is contained in physical remains and memories.
-secondsectionimg: /uploads/CBigHorn1a.jpg
+secondsectionimg: /uploads/CBigHorn1.jpg
 thirdsectiontext: >-
   Ranching has had a long and complex history within the protected area, beginning in the late 1800’s and first decade of the 1900’s. Initially, many families settled in the area but the many small ranches were soon consolidated, eventually forming the modern [Empire Valley Ranch](http://www.empirevalleybeef.com/ "Empire Valley Ranch Website"). This ranch continues to operate within CCPA, with range management guided by the approved management plan and BC Parks.
 

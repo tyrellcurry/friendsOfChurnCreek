@@ -325,13 +325,13 @@ collections:
         } # identifier_field
 
     ### ~~~ Membership PAGE ~~~ ###
-  - name: "membershipPage" # Used in routes, e.g., /admin/collections/blog
+  - name: "membershipdonations" # Used in routes, e.g., /admin/collections/blog
     identifier_field: pagename # Field used for collection item title in UI
     editor:
       preview: false
     label: "Membership & Donations Page" # Used in the UI
     delete: false
-    folder: "/content/membership-donations" # The path to the folder where the documents are stored
+    folder: "content/membershipdonations" # The path to the folder where the documents are stored
     create: false # Disable users from creating new documents in this collection
     slug: "{{slug}}" # Filename template (used when targeting in index.js)
     fields: # The fields for each document
