@@ -350,16 +350,8 @@ collections:
           choose_url: false,
           widget: "image",
         }
-      - {
-          label: "Donation Link",
-          name: "donationlink",
-          widget: "string",
-        }
-      - {
-          label: "Membership Link",
-          name: "membershiplink",
-          widget: "string",
-        }
+      - { label: "Donation Link", name: "donationlink", widget: "string" }
+      - { label: "Membership Link", name: "membershiplink", widget: "string" }
       - {
           label: "Single Membership Fee",
           name: "singlemembership",
@@ -378,7 +370,7 @@ collections:
           editor_components: [],
           modes: ["rich_text"],
           widget: "markdown",
-      }
+        }
       - {
           label: "Bottom Notice Text",
           name: "bottomnotice",
@@ -388,6 +380,98 @@ collections:
           modes: ["rich_text"],
           widget: "markdown",
         }
+      - {
+          label: "*Important* (Do Not Edit)",
+          name: "pagename",
+          widget: "string",
+        } # identifier_field
+
+  ### ~~~ Resources PAGE ~~~ ###
+  - name: "resourcesPage" # Used in routes, e.g., /admin/collections/blog
+    identifier_field: pagename # Field used for collection item title in UI
+    editor:
+      preview: false
+    label: "Resources Page" # Used in the UI
+    delete: false
+    folder: "/content/resources" # The path to the folder where the documents are stored
+    create: false # Disable users from creating new documents in this collection
+    slug: "{{slug}}" # Filename template (used when targeting in index.js)
+    fields: # The fields for each document
+      - {
+          label: "Main Title",
+          name: "title",
+          minimal: true,
+          buttons: ["bold", "italic", "link"],
+          editor_components: [],
+          modes: ["rich_text"],
+          widget: "markdown",
+        }
+      - {
+          label: "Banner: Image",
+          name: "bannerimg",
+          choose_url: false,
+          widget: "image",
+        }
+      - {
+          label: "Introduction: Text",
+          name: "introtext",
+          minimal: true,
+          buttons: ["bold", "italic", "link"],
+          editor_components: [],
+          modes: ["rich_text"],
+          widget: "markdown",
+        }
+      - {
+          label: "Right Image",
+          name: "rightimg",
+          choose_url: false,
+          widget: "image",
+        }
+      - label: "Downloadable Documents"
+        name: "documentlist"
+        widget: "list"
+        summary: "{{fields.linktext}} - {{fields.documentfile}}"
+        fields:
+          - {
+              label: Link Title,
+              name: linktitle,
+              minimal: true,
+              buttons: ["bold", "italic", "link"],
+              editor_components: [],
+              modes: ["rich_text"],
+              widget: "markdown",
+            }
+          - {
+              label: Link Subtitle,
+              name: linksubtitle,
+              minimal: true,
+              buttons: ["bold", "italic", "link"],
+              editor_components: [],
+              modes: ["rich_text"],
+              widget: "markdown",
+            }
+          - {
+              label: Link Small Text,
+              name: linktext,
+              minimal: true,
+              buttons: ["bold", "italic", "link"],
+              editor_components: [],
+              modes: ["rich_text"],
+              widget: "markdown",
+            }
+          - {
+              label: Document,
+              name: documentfile,
+              choose_url: false,
+              required: false,
+              widget: file,
+            }
+          - {
+              label: Website Link (if not uploading document),
+              name: urllink,
+              required: false,
+              widget: "string",
+            }
       - {
           label: "*Important* (Do Not Edit)",
           name: "pagename",

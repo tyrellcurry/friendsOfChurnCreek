@@ -54,9 +54,8 @@ const index = ({ content }) => {
             </div>
             <div>
               <h3 className="text-lg font-medium pb-1">Address:</h3>
-              <p>
-                Friends of Churn Creek Protected Area Society <br /> Box 4144, Williams
-                Lake, B.C., V2G 2V2.
+              <p className="max-w-[375px] m-auto">
+                {membershipDonationsObj.mailingaddress}
               </p>
             </div>
           </div>
