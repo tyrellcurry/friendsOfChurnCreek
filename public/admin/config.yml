@@ -413,27 +413,21 @@ collections:
           widget: "image",
         }
       - {
-          label: "Introduction: Text",
-          name: "introtext",
+          label: "First Section: Text",
+          name: "firstsectiontext",
           minimal: true,
           buttons: ["bold", "italic", "link"],
           editor_components: [],
           modes: ["rich_text"],
           widget: "markdown",
         }
-      - {
-          label: "Right Image",
-          name: "rightimg",
-          choose_url: false,
-          widget: "image",
-        }
-      - label: "Downloadable Documents"
-        name: "documentlist"
+      - label: "Resources"
+        name: "resourceslist"
         widget: "list"
-        summary: "{{fields.linktext}} - {{fields.documentfile}}"
+        summary: "{{fields.resourcetitle}} - {{fields.documentfile}}"
         fields:
           - {
-              label: Link Title,
+              label: Title,
               name: linktitle,
               minimal: true,
               buttons: ["bold", "italic", "link"],
@@ -442,7 +436,7 @@ collections:
               widget: "markdown",
             }
           - {
-              label: Link Subtitle,
+              label: Subtitle,
               name: linksubtitle,
               minimal: true,
               buttons: ["bold", "italic", "link"],
@@ -451,7 +445,7 @@ collections:
               widget: "markdown",
             }
           - {
-              label: Link Small Text,
+              label: Text Content,
               name: linktext,
               minimal: true,
               buttons: ["bold", "italic", "link"],
