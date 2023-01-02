@@ -7,16 +7,24 @@ firstsectiontext: This page will list resource information including research
   of this information as possible downloadable and if we cannot, will provide
   guidance to where it can be obtained.
 resourceslist:
+  - linktitle: Friends of Churn Creek Protected Area Society. 2015.
+    linksubtitle: >-
+        Churn Creek Protected Area grassland monitoring: establishment of "GCC method" plots and grassland ecosystem health ratings in 2014.
+    linktext: Unpublished report submitted to Ministry of Environment, Ecosystem Conservation, Victoria and Ministry of Forests, Lands and Natural Resource Operations, Habitat Management-Cariboo.
+    documentfile: /uploads/Friends-of-Churn-Creek-Protected-Area-Society-2015.pdf
   - linktitle: Friends of Churn Creek Protected Area Society. 2010a.
     linksubtitle: Churn Creek Protected Area 2010 photo-point monitoring.
     linktext: Unpublished report submitted to Grasslands Conservation Council of
       B.C., Kamloops, B.C. and BC Parks, Williams Lake, B.C.
     documentfile: /uploads/fccpas-2010a-photomonitoring-report.pdf
-  - linktitle: T﻿est link
-    linksubtitle: T﻿his is a test for a link
-    linktext: Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, eaque
-      quae? Possimus nemo optio doloremque id. Culpa adipisci libero minima
-      repellat neque perspiciatis, modi aliquam.
-    urllink: https://bcparks.ca/
+  - linktitle: Friends of Churn Creek Protected Area Society. 2010b.
+    linksubtitle: Vegetation monitoring of the proposed Onion Lake prescribed burn, Churn Creek Protected Area, 2010 pre-burn baseline vegetation description.
+    linktext: Unpublished report submitted to Grasslands Conservation Council of B.C., Kamloops, B.C. and BC Parks, Williams Lake, B.C.
+    documentfile: /uploads/FCCPAS-2010b-Preburn-Monitoring-Report.pdf
+  - linktitle: Friends of Churn Creek Protected Area Society. 2012.
+    linksubtitle: An assessment of first year vegetation effects of a 2012 prescribed burn in the Onion Lakes area, Churn Creek Protected Area
+    linktext: Unpublished report submitted to B.C. Parks, Williams Lake, B.C.
+    documentfile: /uploads/Onion-Lake-Burn-Assessment-2012.pdf
+
 pagename: Resources Page Content
 ---
