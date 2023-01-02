@@ -9,7 +9,7 @@ const index = ({ content }) => {
     <>
       <Head>
         <title>
-          Membership & Donations | Friends of Church Creek | Protected Area
+          Resources | Friends of Church Creek | Protected Area
           Society
         </title>
       </Head>
@@ -29,10 +29,9 @@ const index = ({ content }) => {
         <h2 className="pb-5">{resourcesObj.firstsectiontext}</h2>
         <div>
           <h2 className="text-3xl pb-3">Resources:</h2>
-          {console.log(resourcesObj.resourceslist.length)}
           {resourcesObj.resourceslist.length > 0 &&
-            resourcesObj.resourceslist.map((resource) => (
-              <div className="pb-3">
+            resourcesObj.resourceslist.map((resource, i) => (
+              <div key={i} className="pb-3">
                 <h3 className="text-lg font-medium">{resource.linktitle}</h3>
                 <h4 className="text-base pb-1 lg:pb-0">{resource.linksubtitle}</h4>
                 <div className="text-sm lg:flex gap-2">
