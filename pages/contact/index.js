@@ -102,26 +102,27 @@ const index = ({ content }) => {
           <div className="flex gap-8">
             <div className="font-medium">
               {contactObj.executivecontact.length > 0 &&
-                contactObj.executivecontact.map((contact) => (
-                  <p>{contact.role}</p>
+                contactObj.executivecontact.map((contact, i) => (
+                  <p key={i}>{contact.role}</p>
                 ))}
             </div>
             <div>
               {contactObj.executivecontact.length > 0 &&
-                contactObj.executivecontact.map((contact) => (
-                  <p>{contact.name}</p>
+                contactObj.executivecontact.map((contact, i) => (
+                  <p key={i}>{contact.name}</p>
                 ))}
             </div>
             <div>
               {contactObj.executivecontact.length > 0 &&
-                contactObj.executivecontact.map((contact) => (
-                  <p>{contact.phone}</p>
+                contactObj.executivecontact.map((contact, i) => (
+                  <p key={i}>{contact.phone}</p>
                 ))}
             </div>
             <div className="flex flex-col">
               {contactObj.executivecontact.length > 0 &&
-                contactObj.executivecontact.map((contact) => (
+                contactObj.executivecontact.map((contact, i) => (
                   <a
+                    key={i}
                     className="text-blue-700 hover:text-blue-800"
                     href={contact.email}>
                     {contact.email}
