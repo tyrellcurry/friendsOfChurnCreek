@@ -26,9 +26,9 @@ const index = ({ content }) => {
         </h1>
       </header>
       <section className="px-[5vw] md:px-10vw py-6 md:py-8">
-        <h2 className="pb-5">{resourcesObj.firstsectiontext}</h2>
+        <h2 className="pb-5 text-xl">{resourcesObj.firstsectiontext}</h2>
         <div>
-          <h2 className="text-3xl pb-3">Resources:</h2>
+          <h2 className="text-2xl font-medium pb-3">Resources:</h2>
           {resourcesObj.resourceslist.length > 0 &&
             resourcesObj.resourceslist.map((resource, i) => (
               <div key={i} className="pb-3">
@@ -37,9 +37,9 @@ const index = ({ content }) => {
                 <div className="text-sm lg:flex gap-2">
                   <p className="pb-3 lg:pb-0">{resource.linktext}</p>
                   {resource.documentfile ? (
-                    <Link className="text-blue-600 whitespace-nowrap" href={resource.documentfile}target="_blank">[Download PDF]</Link>
+                    <Link className="text-blue-600 whitespace-nowrap hover:text-blue-800" href={resource.documentfile}target="_blank">[Download PDF]</Link>
                   ) : resource.urllink ? (
-                    <Link className="text-blue-600 whitespace-nowrap" href={resource.urllink} target="_blank">[Visit Website]</Link>
+                    <Link className="text-blue-600 whitespace-nowrap hover:text-blue-800" href={resource.urllink} target="_blank">[Visit Website]</Link>
                   ) : (
                     ""
                   )}

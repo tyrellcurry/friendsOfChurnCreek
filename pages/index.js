@@ -26,7 +26,7 @@ export default function Home({ content }) {
             </h2>
             <div className="btn text-center pt-9">
               <button
-                className="bg-gray-600 py-3 px-8 text-lg font-medium tracking-wide"
+                className="bg-zinc-600 py-3 px-8 text-lg font-medium tracking-wide hover:bg-zinc-700 transition duration-100 ease-in-out transition duration-100 ease-in-out"
                 onClick={() => {
                   document.querySelector(".intro").scrollIntoView();
                 }}>
@@ -36,8 +36,8 @@ export default function Home({ content }) {
           </div>
         </div>
         <div className="intro px-10vw pt-14">
-          <h2 className="text-4xl uppercase text-center">Introduction</h2>
-          <ReactMarkdown className={`${style.home_reactmarkdown} pt-5 text-center md:text-left`}>
+          <h2 className="text-4xl font-medium uppercase md:text-center">Introduction</h2>
+          <ReactMarkdown className={`${style.home_reactmarkdown} pt-4 md:text-lg md:text-left`}>
             {homepageObj.introtext}
           </ReactMarkdown>
         </div>
@@ -53,21 +53,21 @@ export default function Home({ content }) {
           </div>
           <div className="right">
             <div className="text">
-              <h3 className="text-xl font-semibold">Our principal goals are:</h3>
+              <h3 className="text-2xl font-semibold">Our principal goals are:</h3>
               <ul className="list-disc pl-5 pt-2">
                 {homepageObj.principalgoals.map((principal, i) => (
-                  <li key={i} className="pt-1">
+                  <li key={i} className="pt-1 md:text-lg">
                     {principal.listitem}
                   </li>
                 ))}
               </ul>
             </div>
             <div className="downloads pt-5">
-              <h2 className="font-semibold text-xl">For reading, printing or download:</h2>
+              <h2 className="font-semibold text-2xl">For reading, printing or download:</h2>
               <ul className="document-list max-w-[800px] list-disc ml-5 pt-3">
                 {homepageObj.documentlist.map((document, i) => (
                   <li key={i} className="pb-1">
-                    <Link
+                    <a
                       href={
                         document.documentfile
                           ? document.documentfile
@@ -76,9 +76,9 @@ export default function Home({ content }) {
                           : "#"
                       }
                       target="_blank"
-                      className="text-blue-800 text-semibold">
+                      className="text-blue-700 text-semibold hover:text-blue-900">
                       {document.linktext}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>

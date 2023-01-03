@@ -1,17 +1,10 @@
 import fs from "fs";
 import matter from "gray-matter";
 import Head from "next/head";
+import Image from "next/image";
 
 const index = ({ content }) => {
   const eventsObj = content.find((item) => item.slug === "events");
-  console.log(
-    eventsObj.eventslist[0].eventdate.substring(
-      0,
-      eventsObj.eventslist[0].eventdate.length - 9
-    )
-  );
-  //   var date_test = new Date(eventsObj.eventslist[0].eventdate).replace(/-/g,"/");
-  // console.log(date_test);
   return (
     <>
       <Head>
@@ -32,15 +25,15 @@ const index = ({ content }) => {
         </h1>
       </header>
       <section className="px-[5vw] md:px-10vw pt-5 pb-5">
-        <h2 className="font-medium text-3xl pt-5 pb-2">Upcoming Events</h2>
-        <h2 className="text-lg pb-5">{eventsObj.firstsectiontext}</h2>
+        <h2 className="font-medium text-2xl md:text-3xl pt-5 pb-2">Upcoming Events</h2>
+        <h2 className="md:text-lg pb-5">{eventsObj.firstsectiontext}</h2>
         <div className="flex">
           <div className="left w-full">
             {eventsObj.eventslist.length > 0 ? (
               eventsObj.eventslist.map((event, i) => (
                 <div
                   key={i}
-                  className="p-6 shadow-lg rounded-lg bg-gray-100 text-gray-700 max-w-[600px] mb-7">
+                  className="p-6 shadow-lg rounded-lg bg-zinc-100 text-zinc-800 max-w-[600px] mb-7">
                   <h2 className="font-medium text-xl mb-1">Event Date:</h2>
                   <h2 className="text-lg mb-3">
                     {event.eventdate.substring(0, event.eventdate.length - 9)} |{" "}
@@ -53,7 +46,7 @@ const index = ({ content }) => {
                 </div>
               ))
             ) : (
-              <div className="p-6 shadow-lg rounded-lg bg-gray-100 text-gray-700 max-w-[375px] mb-5">
+              <div className="p-6 shadow-lg rounded-lg bg-zinc-100 text-zinc-800 max-w-[375px] mb-5">
                 <h2 className="font-medium text-xl mb-1">
                   No upcoming events at this time.
                 </h2>
@@ -62,10 +55,10 @@ const index = ({ content }) => {
           </div>
         </div>
       </section>
-      <section className="px-[5vw] md:px-10vw pb-7">
-        <h2 className="text-4xl font-medium">Activities</h2>
+      <section className="px-[5vw] md:px-10vw pb-2">
+        <h2 className="text-2xl md:text-3xl font-medium">Activities</h2>
         <h3 className="text-xl font-medium pt-5">Hikes</h3>
-        <p className="text-lg">
+        <p className="md:text-lg">
           Three or more day hikes are organized for members each summer. Many of
           these access areas seldom visited by the general public and they
           usually have a natural history, cultural history or protected area
@@ -74,7 +67,7 @@ const index = ({ content }) => {
       </section>
       <section className="px-[5vw] md:px-10vw pb-12">
         <div className="max-w-[800px]">
-          <div class="accordion pt-5" id="accordianMain">
+          <div className="accordion pt-5" id="accordianMain">
                 <div
                   id={`carousel`}
                   className="carousel slide carousel-fade relative max-h-[525px]"
@@ -109,7 +102,9 @@ const index = ({ content }) => {
                           className={`carousel-item ${
                             i < 1 ? "active" : ""
                           } float-left w-full`}>
-                          <img
+                          <Image
+                            width={1200}
+                            height={1200}
                             src={image.image}
                             className="block w-full h-[300px] md:h-[525px] object-cover object-top"
                             alt="Carousel Image"

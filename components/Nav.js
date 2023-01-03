@@ -20,7 +20,7 @@ const Nav = () => {
     });
   });
   return (
-    <div className="px-[5vw] flex py-4 bg-gray-300 md:px-10vw">
+    <div className="px-[5vw] flex py-4 bg-zinc-300 md:px-10vw">
       <nav className="lg:flex gap-5 justify-between w-full">
         <div className="max-w-[100px] lg:max-w-[125px]">
           <Link href="/">
@@ -37,28 +37,28 @@ const Nav = () => {
           <ul className="mobile-menu flex hidden flex-col items-center gap-4 pt-4 lg:p-0 lg:flex lg:flex-row lg:gap-8">
             <li>
               <Link
-                className="link font-medium hover:text-gray-800 text-lg"
+                className="link font-medium hover:text-zinc-800 text-lg"
                 href="/">
                 Home
               </Link>
             </li>
             <li>
               <Link
-                className="link font-medium hover:text-gray-800 text-lg"
+                className="link font-medium hover:text-zinc-800 text-lg"
                 href="/about">
                 About
               </Link>
             </li>
             <li>
               <Link
-                className="link font-medium hover:text-gray-800 text-lg"
+                className="link font-medium hover:text-zinc-800 text-lg"
                 href="/projects">
                 Projects
               </Link>
             </li>
             <li>
               <Link
-                className="link font-medium hover:text-gray-800 text-lg whitespace-nowrap"
+                className="link font-medium hover:text-zinc-800 text-lg whitespace-nowrap"
                 href="/events">
                 Events & Activities
               </Link>
@@ -67,21 +67,21 @@ const Nav = () => {
           <ul className="mobile-menu flex hidden flex-col items-center pt-2 gap-4 lg:p-0 lg:pl-8 lg:flex lg:flex-row lg:gap-8">
             <li>
               <Link
-                className="link font-medium hover:text-gray-800 text-lg"
+                className="link font-medium hover:text-zinc-800 text-lg"
                 href="/membership-donations">
                 Memberships
               </Link>
             </li>
             <li>
               <Link
-                className="link font-medium hover:text-gray-800 text-lg"
+                className="link font-medium hover:text-zinc-800 text-lg"
                 href="/resources">
                 Resources
               </Link>
             </li>
             <li>
               <Link
-                className="link font-medium hover:text-gray-800 text-lg"
+                className="link font-medium hover:text-zinc-800 text-lg"
                 href="/contact">
                 Contact
               </Link>
@@ -90,7 +90,7 @@ const Nav = () => {
         </div>
         <div className="mobile-menu hidden flex lg:flex flex-col py-5 items-center lg:p-0 lg:flex-row">
           <Link
-            className="link rounded-full bg-gray-700 px-9 py-2 font-medium hover:bg-gray-600 text-white text-lg tracking-wide"
+            className="link rounded-full bg-orange-600 px-9 py-2 font-medium hover:bg-orange-700 hover:shadow-lg text-white text-lg tracking-wide transition duration-100 ease-in-out"
             href="/membership-donations">
             Give
           </Link>

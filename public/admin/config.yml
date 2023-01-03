@@ -363,6 +363,20 @@ collections:
           widget: "string",
         }
       - {
+          label: DOC Sign Up Form,
+          name: docdocumentfile,
+          choose_url: false,
+          required: true,
+          widget: file,
+        }
+      - {
+          label: PDF Sign Up Form,
+          name: pdfdocumentfile,
+          choose_url: false,
+          required: true,
+          widget: file,
+        }
+      - {
           label: "Mailing Address",
           name: "mailingaddress",
           minimal: true,
@@ -372,7 +386,7 @@ collections:
           widget: "markdown",
         }
       - {
-          label: "Bottom Notice Text",
+          label: "Donation Notice Text",
           name: "bottomnotice",
           minimal: true,
           buttons: ["bold", "italic", "link"],
@@ -515,7 +529,7 @@ collections:
       - label: "Executive Contact"
         name: "executivecontact"
         widget: "list"
-        summary: "{{fields.linktitle}}"
+        summary: "{{fields.role}} - {{fields.name}}"
         fields:
           - {
               label: Role,

@@ -23,9 +23,9 @@ const index = ({ content }) => {
           {contactObj.title}
         </h1>
       </header>
-      <section className="px-[5vw] md:px-10vw py-8 lg:py-16 ">
+      <section className="px-[5vw] md:px-10vw py-8 lg:py-12 lg:pb-14">
         <div>
-          <h2 className="text-center text-3xl font-medium pb-5">
+          <h2 className="md:text-center text-2xl md:text-3xl font-medium pb-5">
             Send Us A Message
           </h2>
         </div>
@@ -40,7 +40,7 @@ const index = ({ content }) => {
                   Full Name:
                 </label>
                 <input
-                  className="border-solid border-2 border-gray-700 p-2"
+                  className="border-solid border-2 border-zinc-700 p-2"
                   type="text"
                   name="name"
                   placeholder="John Doe"
@@ -52,7 +52,7 @@ const index = ({ content }) => {
                   Email:
                 </label>
                 <input
-                  className="border-solid border-2 border-gray-700 p-2"
+                  className="border-solid border-2 border-zinc-700 p-2"
                   type="email"
                   name="email"
                   placeholder="example@email.com"
@@ -64,7 +64,7 @@ const index = ({ content }) => {
                   Phone Number (optional):
                 </label>
                 <input
-                  className="border-solid border-2 border-gray-700 p-2"
+                  className="border-solid border-2 border-zinc-700 p-2"
                   type="phone"
                   name="phone"
                   placeholder="(555) 555-5555"
@@ -75,31 +75,31 @@ const index = ({ content }) => {
                   Message:
                 </label>
                 <textarea
-                  className="form-control border-solid border-2 border-gray-700 p-2"
+                  className="form-control border-solid border-2 border-zinc-700 p-2"
                   placeholder="Your Message"
                   name="message"
                   rows="10"
                   required></textarea>
               </div>
               <button
-                className="bg-gray-700 text-white self-start py-3 px-12 text-lg hover:bg-gray-600"
+                className="bg-zinc-700 text-white self-start py-3 px-12 text-lg hover:bg-zinc-600 transition duration-100 ease-in-out"
                 type="submit">
                 Send
               </button>
             </form>
           </div>
         </div>
-        <div className="text-center pb-8">
+        <div className="md:text-center pb-8">
           <h2 className="text-xl font-medium pb-2">General Mailing Address:</h2>
-          <p className="max-w-[375px] m-auto">
+          <p className="md:max-w-[375px] md:m-auto">
             {contactObj.mailingaddress}
           </p>
         </div>
-        <div className="w-fit m-auto">
-          <h2 className="text-center text-lg font-medium pb-2">
+        <div className="md:w-fit m-auto">
+          <h2 className="md:text-center text-lg font-medium pb-2">
             Executive Contact (2015/2016):
           </h2>
-          <div className="flex gap-8">
+          <div className="hidden md:flex gap-8">
             <div className="font-medium">
               {contactObj.executivecontact.length > 0 &&
                 contactObj.executivecontact.map((contact, i) => (
@@ -129,6 +129,24 @@ const index = ({ content }) => {
                   </a>
                 ))}
             </div>
+          </div>
+          <div className="md:hidden">
+          {contactObj.executivecontact.length > 0 &&
+                contactObj.executivecontact.map((contact, i) => (
+                  <div key={i} className="pb-2">
+                    <div className="flex gap-2">
+                    <p className="font-medium">{contact.name}</p>
+                    <p>-</p>
+                    <p>{contact.role}</p>
+                    </div>
+                    <p>{contact.phone}</p>
+                    <a
+                    className="text-blue-700 hover:text-blue-800"
+                    href={contact.email}>
+                    {contact.email}
+                  </a>
+                  </div>
+                ))}
           </div>
         </div>
       </section>
