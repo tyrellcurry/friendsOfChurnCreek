@@ -87,7 +87,7 @@ const index = ({ content }) => {
       </section>
       <section className="px-[5vw] md:px-10vw text-center text-2xl md:text-3xl font-medium py-16 md:py-24 bg-zinc-50">
         <h2>
-          Thank you for you support and for considering membership with the <br className="hidden xl:block" /> Friends of Churn Creek P.A. Society
+          Thank you for you support and consideration with the <br className="hidden xl:block" /> Friends of Churn Creek P.A. Society
         </h2>
       </section>
     </>
