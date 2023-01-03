@@ -4,7 +4,7 @@ bannerimg: /uploads/events-banner-1.jpg
 firstsectiontext: FCCPAS organizes hikes for members each summer and also
   occasionally sponsors special events. Our AGM is usually held in April of each
   year and, weather permitting, usually includes a short walk in Churn Creek
-  Protected Area. 
+  Protected Area.
 eventslist:
   - eventdate: February 25, 2023 10:23 PM
     eventtext: This is a test hike event for testing purposes.
@@ -15,6 +15,9 @@ eventslist:
   - eventdate: June 5, 2023 10:23 PM
     eventtext: This is a test hike event for testing purposes.
     eventtime: 12:30pm
+  - eventtime: 11:30am
+    eventdate: January 3, 2023 4:01 PM
+    eventtext: L﻿ittle Tester
 activityimages:
   - image: /uploads/events-1.jpg
   - image: /uploads/events-2.jpg
