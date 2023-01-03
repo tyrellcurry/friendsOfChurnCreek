@@ -10,7 +10,7 @@ const index = ({ content }) => {
     <>
       <Head>
         <title>
-          Membership & Donations | Friends of Church Creek | Protected Area
+          Memberships & Donations | Friends of Church Creek | Protected Area
           Society
         </title>
       </Head>

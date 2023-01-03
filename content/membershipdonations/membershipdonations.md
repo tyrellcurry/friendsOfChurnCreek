@@ -1,5 +1,5 @@
 ---
-title: Membership & Donations
+title: Memberships & Donations
 bannerimg: /uploads/membership-banner-2.jpg
 donationlink: https://www.paypal.com/donate/buttons/partner
 membershiplink: https://www.paypal.com/donate/buttons/partner
