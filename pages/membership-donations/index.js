@@ -1,7 +1,6 @@
 import fs from "fs";
 import matter from "gray-matter";
 import Head from "next/head";
-import Link from "next/link";
 
 const index = ({ content }) => {
   const membershipDonationsObj = content.find(
@@ -33,7 +32,7 @@ const index = ({ content }) => {
           <div className="left pb-7 md:w-1/2 md:px-5 md:pb-0">
             <h2 className="text-4xl font-medium pb-7">Make a Donation Today</h2>
             <div>
-              <Link href={membershipDonationsObj.donationlink} target="_blank">
+              <a href={membershipDonationsObj.donationlink} target="_blank" rel="noreferrer">
                 <button
                   type="button"
                   data-mdb-ripple="true"
@@ -41,7 +40,7 @@ const index = ({ content }) => {
                   class="inline-block px-6 py-2.5 bg-orange-600 text-white font-medium text-lg leading-tight uppercase rounded-full shadow-md hover:bg-orange-700 hover:shadow-lg focus:outline-none focus:ring-0 transition duration-100 ease-in-out">
                   Donate Online
                 </button>
-              </Link>
+              </a>
             </div>
             <div>
             <h3 className="pt-7 text-xl font-medium">Mail Your Donation:</h3>
@@ -55,7 +54,7 @@ const index = ({ content }) => {
           </div>
           <div className="right md:w-1/2 md:px-5">
             <h2 className="text-4xl font-medium pb-7">Become A Member</h2>
-            <Link href={membershipDonationsObj.membershiplink} target="_blank">
+            <a href={membershipDonationsObj.membershiplink} target="_blank" rel="noreferrer">
               <button
                 type="button"
                 data-mdb-ripple="true"
@@ -63,7 +62,7 @@ const index = ({ content }) => {
                 class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-lg leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-0 transition duration-100 ease-in-out">
                 Signup Online
               </button>
-            </Link>
+            </a>
             <h3 className="pt-7 text-xl font-medium">
               Individual membership fees:
             </h3>
@@ -78,7 +77,7 @@ const index = ({ content }) => {
             <h3 className="pt-7 text-xl font-medium">Mail Your Membership:</h3>
             <p className="pt-1">
               To apply for membership via mail, download the membership <br className="hidden lg:block" /> form <a className="text-blue-600 hover:text-blue-800" href={membershipDonationsObj.docdocumentfile}>.doc</a> or
-               <a className="text-blue-600 hover:text-blue-800" href={membershipDonationsObj.pdfdocumentfile} target="_blank"> .pdf</a>, fill out and mail together with a cheque, to:
+               <a className="text-blue-600 hover:text-blue-800" href={membershipDonationsObj.pdfdocumentfile} target="_blank" rel="noreferrer"> .pdf</a>, fill out and mail together with a cheque, to:
             </p>
             <p className="pt-1 max-w-[375px] m-auto font-medium">
               {membershipDonationsObj.mailingaddress}

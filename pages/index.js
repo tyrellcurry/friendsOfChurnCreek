@@ -2,7 +2,6 @@ import fs from "fs";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import Head from "next/head";
-import Link from "next/link";
 import style from "../styles/Markdown.module.css";
 import Image from "next/image";
 
@@ -76,6 +75,7 @@ export default function Home({ content }) {
                           : "#"
                       }
                       target="_blank"
+                      rel="noreferrer"
                       className="text-blue-700 text-semibold hover:text-blue-900">
                       {document.linktext}
                     </a>

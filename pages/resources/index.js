@@ -37,9 +37,9 @@ const index = ({ content }) => {
                 <div className="text-sm lg:flex gap-2">
                   <p className="pb-3 lg:pb-0">{resource.linktext}</p>
                   {resource.documentfile ? (
-                    <Link className="text-blue-600 whitespace-nowrap hover:text-blue-800" href={resource.documentfile}target="_blank">[Download PDF]</Link>
+                    <a className="text-blue-600 whitespace-nowrap hover:text-blue-800" href={resource.documentfile}target="_blank" rel="noreferrer">[Download PDF]</a>
                   ) : resource.urllink ? (
-                    <Link className="text-blue-600 whitespace-nowrap hover:text-blue-800" href={resource.urllink} target="_blank">[Visit Website]</Link>
+                    <a className="text-blue-600 whitespace-nowrap hover:text-blue-800" href={resource.urllink} target="_blank" rel="noreferrer">[Visit Website]</a>
                   ) : (
                     ""
                   )}
