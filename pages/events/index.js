@@ -102,9 +102,7 @@ const index = ({ content }) => {
                           className={`carousel-item ${
                             i < 1 ? "active" : ""
                           } float-left w-full`}>
-                          <Image
-                            width={1200}
-                            height={1200}
+                          <img
                             src={image.image}
                             className="block w-full h-[300px] md:h-[525px] object-cover object-top"
                             alt="Carousel Image"

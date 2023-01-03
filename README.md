@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Friends Of Churn Creek (In Progress)
 
-## Getting Started
+<!-- ## Checkout The Live Project: [HERE!](https://photosnap-tc.netlify.app/) -->
 
-First, run the development server:
+<!-- ## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
+- [Overview](#overview)
+  - [The Project](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+## Overview -->
+
+### The Project
+
+I volunteered my time to rebuild the Friends Of Churn Creek (non-profit) website.
+
+Features that were added:
+
+- Netlify CMS connection for full control over page content
+- Mobile responsiveness
+- Full redesign
+- Modern best practises
+- Online contact form & donation/membership submissions
+
+<!-- 
+## Screenshots
+### Desktop Version
+
+<img src="./screenshots/desktop.png" width="400" />
+
+### Tablet Version
+
+<img src="./screenshots/tablet.png" width="400" />
+
+### Mobile Version
+
+<img src="./screenshots/mobile.png" width="200"/> -->
+<!-- 
+### Links
+
+- Live Site URL: [Netlify](https://photosnap-tc.netlify.app/)
+
+## My process
+
+### Built with
+
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [Next.js](https://nextjs.org/) - React framework
+- [Node.js](https://nodejs.org/en/) - JS Runtime
+- [Tailwind CSS](https://tailwindcss.com/) - CSS Framework
+
+### What I learned
+
+#### Building a JSON Data file from scratch
+
+```json
+{ "title": "The Mountains", "images": { "desktop":
+"./assets/stories/desktop/mountains.jpg", "mobile":
+"./assets/stories/mobile/mountains.jpg", "tablet":
+"./assets/stories/tablet/mountains.jpg" }, "date": "April 16th 2020",
+"photographer": "John Appleseed", "isHomepage": true, "id": 2 },
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Using the Fill CSS property to fill a SVG
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```css
+#tw:hover {
+  fill: url(#gradientTW);
+}
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+#### Using Map and Filter together to populate cards using the JSON data
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```js
+{
+  storiesItemsData
+    .filter((media) => !media.isHomepage && !media.isMainCard)
+    .map((media) => (
+      <StoriesCards
+        title={media.title}
+        mobile={media.images.mobile}
+        desktop={media.images.desktop}
+        tablet={media.images.tablet}
+        date={media.date}
+        photographer={media.photographer}
+        key={media.id}
+      />
+    ));
+}
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### Using state to toggle between classes for tailwind styling and displaying text
 
-## Learn More
+```js
+const [isActive, setActive] = useState(false);
 
-To learn more about Next.js, take a look at the following resources:
+const toggleClass = () => {
+  setActive(!isActive);
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Continued development
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+I would like to learn more about working with JSON data in React & NextJS projects. I would also like to gain more experience creating reusable components.
 
-## Deploy on Vercel
+### Useful resources
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [Grid Template Cols - TailwindCSS](https://tailwindcss.com/docs/grid-template-columns) - This helped me with creating the layouts to ensure they were responsive and taking up their required space. Tailwind has really great documentation that makes using their framework a breeze.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Kevin Powell - Are you writing responsive CSS the wrong way?](https://www.youtube.com/watch?v=0ohtVzCSHqs) - This is an amazing video that really helped me understand that less is more when working with CSS and responsiveness.
+
+## Author
+
+- Website - [Tyrell Curry](https://www.tyrellcurry.io)
+- Frontend Mentor - [LinkedIn](https://www.linkedin.com/in/tyrellcurry/)
+- Twitter - [@Tyrell_io](https://twitter.com/Tyrell_io)
+
+## Acknowledgments
+
+Special thanks to [Rodderick Garland](https://github.com/zencoder24) for collaborating on the project. -->
