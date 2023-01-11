@@ -37,7 +37,7 @@ const index = ({ content }) => {
                   type="button"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
-                  class="inline-block px-6 py-2.5 bg-orange-600 text-white font-medium text-lg leading-tight uppercase rounded-full shadow-md hover:bg-orange-700 hover:shadow-lg focus:outline-none focus:ring-0 transition duration-100 ease-in-out">
+                  className="inline-block px-6 py-2.5 bg-orange-600 text-white font-medium text-lg leading-tight uppercase rounded-full shadow-md hover:bg-orange-700 hover:shadow-lg focus:outline-none focus:ring-0 transition duration-100 ease-in-out">
                   Donate Online
                 </button>
               </a>
@@ -59,7 +59,7 @@ const index = ({ content }) => {
                 type="button"
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="light"
-                class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-lg leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-0 transition duration-100 ease-in-out">
+                className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-lg leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-0 transition duration-100 ease-in-out">
                 Signup Online
               </button>
             </a>
