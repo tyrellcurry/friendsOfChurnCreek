@@ -10,13 +10,13 @@ executivecontact:
     phone: 250-392-1440
     email: peter&skye@telus.net
   - role: Vice President
-    name: Phyllis Webstad
-    phone: 250-989-2222
-    email: ttpmjack@hotmail.com
+    name: Mike Kennedy
+    phone: ‭250-256-1853‬
+    email: mspkennedy@gmail.com
   - role: Treasurer
-    name: Glen Davidson
-    phone: 250-398-5809
-    email: gcdavidson@shaw.ca
+    name: Jim Young
+    phone: 250-398-7987‬
+    email: jkyoung4@telus.net
   - role: Secretary
     name: Kristi Iverson
     phone: 250-396-7403
