@@ -97,7 +97,7 @@ const index = ({ content }) => {
         </div>
         <div className="md:w-fit m-auto">
           <h2 className="md:text-center text-lg font-medium pb-2">
-            Executive Contact (2015/2016):
+            {contactObj.executivecontacttitle}:
           </h2>
           <div className="hidden md:flex gap-8">
             <div className="font-medium">
