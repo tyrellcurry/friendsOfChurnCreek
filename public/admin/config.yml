@@ -526,6 +526,11 @@ collections:
           modes: ["rich_text"],
           widget: "markdown",
         }
+      - {
+          label: "Executive Contact Title",
+          name: "executivecontacttitle",
+          widget: "string",
+        } 
       - label: "Executive Contact"
         name: "executivecontact"
         widget: "list"
