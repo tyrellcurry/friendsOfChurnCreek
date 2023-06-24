@@ -1,7 +1,7 @@
 ---
 title: Contact Us
 bannerimg: /uploads/project-2-kiosk.jpg
-contactformemail: 1cd7e798325c2402a486b835edf2be5c
+contactformemail: friendsofchurn@gmail.com
 mailingaddress: Friends of Churn Creek Protected Area Society Box 4144, Williams Lake, B.C. V2G 2V2. 
 executivecontacttitle: Executive Contact (2022/2023)
 executivecontact:
