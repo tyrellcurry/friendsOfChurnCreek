@@ -46,10 +46,10 @@ documentlist:
     documentfile: /uploads/newsletter-winter-2013.pdf
   - linktext: 2012 Newsletter [PDF]
     documentfile: /uploads/newsletter-winter-2012.pdf
-  - linktext: Society Constitution [PDF]
+  - linktext: Friends of Churn Constitution
     documentfile: /uploads/society-constitution.pdf
   - linktext: BC Parks Churn Creek Protected Area Management Plan
-    urllink: https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiN9afz78L9AhW3AzQIHXhaDk4QFnoECBIQAQ&url=https%3A%2F%2Fwww.for.gov.bc.ca%2Fhfd%2Flibrary%2Fdocuments%2Fbib87801.pdf&usg=AOvVaw3BONx0t54BIpFAmsdglhkt
+    urllink: https://www.for.gov.bc.ca/hfd/library/documents/bib87801.pdf
   - linktext: Driving directions to Churn Creek Protected Area [PDF]
     documentfile: /uploads/driving-directions-to-CCPA.pdf
 pagename: Home Page Content
