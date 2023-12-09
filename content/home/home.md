@@ -16,11 +16,11 @@ introtext: Friends of Churn Creek Protected Area Society is a non-profit
 principalimg: /uploads/LoneCabinCrkView.jpg
 principalgoals:
   - listitem: Increase public awareness of natural and cultural heritage values of CCPA
-  - listitem: Support research on natural and cultural heritage values of CCPA
+  - listitem: Conduct and support research on natural and cultural heritage values
+      of CCPA
   - listitem: Promote conservation and restoration of natural ecosystems within the CCPA
   - listitem: Enhance visitor appreciation of natural and cultural heritage values
       of CCPA
-  - listitem: Facilitate public input to management planning for CCPA
 documentlist:
   - linktext: 2023 Newsletter [PDF]
     documentfile: /uploads/newsletter-2023-f.pdf
